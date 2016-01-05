@@ -8,7 +8,8 @@
 	<body>
 		<div id="register">
 			<h1>Register</h1>
-			<form action="" method="get" id="registerForm" onsubmit="return false;">
+			<form action="" method="get" id="registerForm" onsubmit="return false">
+				<p id="registerErrors"></p>
 				<div>
 					<label for="registerUsrename">Username:</label>
 					<input type="text" name="registerUsrename" id="registerUsrename" />
@@ -26,10 +27,11 @@
 					<input type="password" name="repeatPassword" id="repeatPassword" />
 				</div>
 				<div>
-					<button type="submit" id="login">Login</button>
+					<button type="submit" id="login" onclick="validateRegister()">Login</button>
 				</div>
 			</form>
 		</div>
 	</body>
-	<script type="text/javascript" src="js/main.js"></script>
+	
+	<script type="text/javascript" src="js/register_validation.js"></script>
 </html>
