@@ -4,34 +4,34 @@
 		<meta charset="UTF-8">
 		<title>Register</title>
 		<link rel="stylesheet" href="css/main.css" />
+		<link rel="stylesheet" href="css/bootstrap.css" />
 	</head>
 	<body>
-		<div id="register">
+		<div id="register" class="container">
 			<h1>Register</h1>
-			<form action="" method="get" id="registerForm" onsubmit="return false">
+			<form action="" method="get" id="registerForm" onsubmit="return false" class="form">
 				<p id="registerErrors"></p>
-				<div>
+				<div class="form-group">
 					<label for="registerUsrename">Username:</label>
-					<input type="text" name="registerUsrename" id="registerUsrename" />
+					<input type="text" name="registerUsrename" id="registerUsrename" class="form-control" />
 				</div>
-				<div>
+				<div class="form-group">
 					<label for="email">Email:</label>
-					<input type="email" name="email" id="email" />
+					<input type="email" name="email" id="email" class="form-control" />
 				</div>
-				<div>
+				<div class="form-group">
 					<label for="registerPassword">Password:</label>
-					<input type="password" name="registerPassword" id="registerPassword" />
+					<input type="password" name="registerPassword" id="registerPassword" class="form-control" />
 				</div>
-				<div>
+				<div class="form-group">
 					<label for="repeatPassword">Repeat password:</label>
-					<input type="password" name="repeatPassword" id="repeatPassword" />
+					<input type="password" name="repeatPassword" id="repeatPassword" class="form-control" />
 				</div>
-				<div>
-					<button type="submit" id="login" onclick="validateRegister()">Login</button>
+				<div class="form-group">
+					<button type="submit" id="login" class="btn btn-info" onclick="validateRegister()">Register</button>
 				</div>
 			</form>
 		</div>
 	</body>
-	
 	<script type="text/javascript" src="js/register_validation.js"></script>
 </html>

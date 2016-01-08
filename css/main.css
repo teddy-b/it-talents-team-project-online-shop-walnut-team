@@ -1,1 +1,59 @@
 @CHARSET "UTF-8";
+
+body,
+header,
+nav,
+section,
+footer,
+div,
+p,
+h1,
+h2,
+form,
+label,
+input,
+button,
+ul,
+li,
+a {
+	margin: 0;
+	padding: 0;
+}
+
+#loginLi ul {
+	width: 400px;
+	padding: 10px;
+}
+
+#loginLi li {
+	border: 0;
+}
+
+#loggedin {
+	display: none;
+}
+
+li {
+	list-style-type: none;
+}
+
+#register {
+	width: 30%;
+	margin: 50px auto;
+}
+.col-md-1,
+.col-md-2,
+.col-md-3,
+.col-md-4,
+.col-md-5,
+.col-md-6,
+.col-md-7,
+.col-md-8,
+.col-md-9,
+.col-md-10,
+.col-md-11,
+.col-md-12,
+li {
+	border: 1px solid black;
+	border-radius: 5px;
+}

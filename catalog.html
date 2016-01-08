@@ -2,85 +2,104 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>Catalog</title>
+		<title>Home</title>
 		<link rel="stylesheet" href="css/main.css" />
+		<link rel="stylesheet" href="css/bootstrap.css" />
 	</head>
 	<body>
-		<div id="container">
-			<header>
-				<div id="logo">
-					<h1>Walnut</h1>
+		<div id="container" class="container">
+			<header class="row">
+				<div id="logo" class="col-md-4">
+					<h1><a href="index.html">Walnut</a></h1>
 					<h2>Online Shop</h2>
 				</div>
-				<form action="" method="get" id="searchForm" onsubmit="return false;">
-					<input type="text" name="searchInput" id="searchInput" />
-					<button type="submit" id="searchSubmit">Search</button>
-				</form>
-				<nav>
-					<ul>
-						<li><a href="about.html">About us</a></li>
-						<li><a href="contact.html">Contact</a></li>
+				<div class="col-md-4">
+					<form action="" method="get" id="searchForm" onsubmit="return false;" class="navbar-form">
+						<input type="text" name="searchInput" id="searchInput" class="form-control" />
+						<button type="submit" id="searchSubmit" class="btn btn-info">Search</button>
+					</form>
+				</div>
+				<nav class="col-md-4">
+					<ul class="nav nav-pills nav-justified">
+						<li role="presentation"><a href="about.html">About us</a></li>
+						<li role="presentation"><a href="contact.html">Contact</a></li>
 					</ul>
-				</nav>
-				<div>
-					<ul>
-						<li id="loginLi">Login
-							<form action="" method="get" id="loginForm" onsubmit="return false;">
-								<div>
-									<label for="loginUsrename">Username:</label>
-									<input type="text" name="loginUsrename" id="loginUsrename" />
-								</div>
-								<div>
-									<label for="loginPassword">Password:</label>
-									<input type="password" name="loginPassword" id="loginPassword" />
-								</div>
-								<div>
-									<input type="checkbox" name="remember" id="remember" />
-									<label for="remember">Remember me</label>
-								</div>
-								<div>
-									<button type="submit" id="loginBtn">Login</button>
-								</div>
-							</form>
+					<ul id="loggedout" class="nav nav-pills nav-justified">
+						<li id="loginLi" role="presentation" class="dropdown">
+    						<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+      							Login<span class="caret"></span>
+    						</a>
+    						<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+    							<li>
+									<form action="" method="get" id="loginForm" onsubmit="return false;" class="form">
+										<div class="form-group">
+											<label for="loginUsrename">Username:</label>
+											<input type="text" name="loginUsrename" id="loginUsrename" class="form-control" />
+										</div>
+										<div class="form-group">
+											<label for="loginPassword">Password:</label>
+											<input type="password" name="loginPassword" id="loginPassword" class="form-control" />
+										</div>
+										<div class="form-group">
+											<input type="checkbox" name="remember" id="remember" />
+											<label for="remember">Remember me</label>
+										</div>
+										<div class="form-group">
+											<button type="submit" id="loginBtn" class="btn btn-info">Login</button>
+										</div>
+									</form>
+								</li>
+							</ul>
 						</li>
-						<li id="logoutLi">
-							<button type="submit" id="logoutBtn">Logout</button>
-						</li>
-						<li id="profileLi">
-							<a href="profile.html">Profile</a>
-						</li>
-						<li id="registerLi">
+						<li id="registerLi" role="presentation">
 							<a href="register.html">Register</a>
 						</li>
-						<li id="cartLi">
+						<li id="cartLi" role="presentation">
 							<a href="cart.html">Cart</a>
 						</li>
 					</ul>
-				</div>
-			</header>
-			<nav>
-				<ul>
-					<li>Category 1
-						<li>Sub-category 1
-							<li><a href="catalog.html">Product-type 1</a></li>
-							<li><a href="catalog.html">Product-type 2</a></li>
-							<li><a href="catalog.html">Product-type 3</a></li>
-							<li><a href="catalog.html">Product-type 4</a></li>
-							<li><a href="catalog.html">Product-type 5</a></li>
+					<ul id="loggedin" class="row">
+						<li id="logoutLi" class="col-md-4">
+							<button type="submit" id="logoutBtn">Logout</button>
 						</li>
-						<li>Sub-category 2</li>
-						<li>Sub-category 3</li>
+						<li id="profileLi" class="col-md-4">
+							<a href="profile.html">Profile</a>
+						</li>
+						<li id="cartLi" class="col-md-4">
+							<a href="cart.html">Cart</a>
+						</li>
+					</ul>
+				</nav>
+			</header>
+			<nav class="row">
+				<ul class="nav nav-pills nav-justified">
+					<li role="presentation" class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+							Category 1
+						</a>
+						<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+							<li>Sub-category 1
+								<ul>
+									<li><a href="catalog.html">Product-type 1</a></li>
+									<li><a href="catalog.html">Product-type 2</a></li>
+									<li><a href="catalog.html">Product-type 3</a></li>
+									<li><a href="catalog.html">Product-type 4</a></li>
+									<li><a href="catalog.html">Product-type 5</a></li>
+								</ul>
+							</li>
+							<li>Sub-category 2</li>
+							<li>Sub-category 3</li>
+						</ul>
 					</li>
-					<li>Category 2</li>
-					<li>Category 3</li>
-					<li>Category 4</li>
-					<li>Category 5</li>
-					<li>Category 6</li>
-					<li>Category 7</li>
+					<li role="presentation"><a href="#">Category 2</a></li>
+					<li role="presentation"><a href="#">Category 3</a></li>
+					<li role="presentation"><a href="#">Category 4</a></li>
+					<li role="presentation"><a href="#">Category 5</a></li>
+					<li role="presentation"><a href="#">Category 6</a></li>
 				</ul>
 			</nav>
-			<div id="main">
-				<section id="filter">
+			<div id="main" class="row">
+				<section id="filter" class="col-md-2">
 					<form action="">
 						<div>
 							<label for="orderby">Order by:</label>
@@ -91,107 +110,125 @@
 								<option value="newest">Newest</option>
 							</select>
 						</div>
-						<h3>Filter 1</h3>
 						<div>
-							<input type="checkbox" />
-							<label for="">Filter choice 1</label>
-							<input type="checkbox" />
-							<label for="">Filter choice 2</label>
-							<input type="checkbox" />
-							<label for="">Filter choice 3</label>
+							<h3>Filter 1</h3>
+							<div>
+								<input type="checkbox" id="chice1" value="chice1" />
+								<label for="chice1">Filter choice 1</label>
+							</div>
+							<div>
+								<input type="checkbox" id="chice2" value="chice2" />
+								<label for="chice2">Filter choice 2</label>
+							</div>
+							<div>
+								<input type="checkbox" id="chice3" value="chice3" />
+								<label for="chice3">Filter choice 3</label>
+							</div>
 						</div>
-						<h3>Filter 2</h3>
 						<div>
-							<input type="checkbox" />
-							<label for="">Filter choice 1</label>
-							<input type="checkbox" />
-							<label for="">Filter choice 2</label>
-							<input type="checkbox" />
-							<label for="">Filter choice 3</label>
+							<h3>Filter 2</h3>
+							<div>
+								<input type="checkbox" id="chice1" value="chice1" />
+								<label for="chice1">Filter choice 1</label>
+							</div>
+							<div>
+								<input type="checkbox" id="chice2" value="chice2" />
+								<label for="chice2">Filter choice 2</label>
+							</div>
+							<div>
+								<input type="checkbox" id="chice3" value="chice3" />
+								<label for="chice3">Filter choice 3</label>
+							</div>
 						</div>
-						<h3>Filter 3</h3>
 						<div>
-							<input type="checkbox" />
-							<label for="">Filter choice 1</label>
-							<input type="checkbox" />
-							<label for="">Filter choice 2</label>
-							<input type="checkbox" />
-							<label for="">Filter choice 3</label>
+							<h3>Filter 3</h3>
+							<div>
+								<input type="checkbox" id="chice1" value="chice1" />
+								<label for="chice1">Filter choice 1</label>
+							</div>
+							<div>
+								<input type="checkbox" id="chice2" value="chice2" />
+								<label for="chice2">Filter choice 2</label>
+							</div>
+							<div>
+								<input type="checkbox" id="chice3" value="chice3" />
+								<label for="chice3">Filter choice 3</label>
+							</div>
 						</div>
 					</form>
 				</section>
 				<section id="catalog">
-					<article>
+					<article class="col-md-2">
 						<h3><a href="product.html">Product 1</a></h3>
 						<a href="product.html"><img src="" alt="product 1" /></a>
 						<p>Price</p>
 					</article>
-					<article>
+					<article class="col-md-2">
 						<h3><a href="product.html">Product 2</a></h3>
 						<a href="product.html"><img src="" alt="product 2" /></a>
 						<p>Price</p>
 					</article>
-					<article>
+					<article class="col-md-2">
 						<h3><a href="product.html">Product 3</a></h3>
 						<a href="product.html"><img src="" alt="product 3" /></a>
 						<p>Price</p>
 					</article>
-					<article>
+					<article class="col-md-2">
 						<h3><a href="product.html">Product 4</a></h3>
 						<a href="product.html"><img src="" alt="product 4" /></a>
 						<p>Price</p>
 					</article>
-					<article>
+					<article class="col-md-2">
 						<h3><a href="product.html">Product 5</a></h3>
 						<a href="product.html"><img src="" alt="product 5" /></a>
 						<p>Price</p>
 					</article>
-					<article>
+					<article class="col-md-2">
 						<h3><a href="product.html">Product 6</a></h3>
 						<a href="product.html"><img src="" alt="product 6" /></a>
 						<p>Price</p>
 					</article>
-					<article>
+					<article class="col-md-2">
 						<h3><a href="product.html">Product 7</a></h3>
 						<a href="product.html"><img src="" alt="product 7" /></a>
 						<p>Price</p>
 					</article>
-					<article>
+					<article class="col-md-2">
 						<h3><a href="product.html">Product 8</a></h3>
 						<a href="product.html"><img src="" alt="product 8" /></a>
 						<p>Price</p>
 					</article>
-					<article>
+					<article class="col-md-2">
 						<h3><a href="product.html">Product 9</a></h3>
 						<a href="product.html"><img src="" alt="product 9" /></a>
 						<p>Price</p>
 					</article>
-					<article>
+					<article class="col-md-2">
 						<h3><a href="product.html">Product 10</a></h3>
 						<a href="product.html"><img src="" alt="product 10" /></a>
 						<p>Price</p>
 					</article>
-					<article>
+					<article class="col-md-2">
 						<h3><a href="product.html">Product 11</a></h3>
 						<a href="product.html"><img src="" alt="product 11" /></a>
 						<p>Price</p>
 					</article>
-					<article>
+					<article class="col-md-2">
 						<h3><a href="product.html">Product 12</a></h3>
 						<a href="product.html"><img src="" alt="product 12" /></a>
 						<p>Price</p>
 					</article>
-					<article>
+					<article class="col-md-2">
 						<h3><a href="product.html">Product 13</a></h3>
 						<a href="product.html"><img src="" alt="product 13" /></a>
 						<p>Price</p>
 					</article>
-					<article>
+					<article class="col-md-2">
 						<h3><a href="product.html">Product 14</a></h3>
 						<a href="product.html"><img src="" alt="product 14" /></a>
 						<p>Price</p>
 					</article>
-					<article>
+					<article class="col-md-2">
 						<h3><a href="product.html">Product 15</a></h3>
 						<a href="product.html"><img src="" alt="product 15" /></a>
 						<p>Price</p>
@@ -200,11 +237,11 @@
 			</div>
 			<footer>
 				<nav>
-					<ul>
-						<li><a href="about.html">About us</a></li>
-						<li><a href="contact.html">Contact</a></li>
-						<li><a href="terms.html">Terms and Conditions</a></li>
-						<li><a href="sitemap.html">Site map</a></li>
+					<ul class="row">
+						<li class="col-md-3"><a href="about.html">About us</a></li>
+						<li class="col-md-3"><a href="contact.html">Contact</a></li>
+						<li class="col-md-3"><a href="terms.html">Terms and Conditions</a></li>
+						<li class="col-md-3"><a href="sitemap.html">Site map</a></li>
 					</ul>
 				</nav>
 				<p>IT Talents Training Camp Walnut Team 2015 All rights reserved</p>
@@ -212,4 +249,6 @@
 		</div>
 	</body>
 	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
 </html>
