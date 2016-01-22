@@ -5,77 +5,90 @@
 		<title>Home</title>
 		<link rel="stylesheet" href="css/main.css" />
 		<link rel="stylesheet" href="css/bootstrap.css" />
+		<link href='https://fonts.googleapis.com/css?family=Seymour+One&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 	</head>
 	<body>
 		<div id="container" class="container">
 			<header class="row">
 				<div id="logo" class="col-md-4">
 					<h1><a href="index.html">Walnut</a></h1>
-					<h2>Online Shop</h2>
+					<h3><a href="index.html">Online Shop</a></h3>
 				</div>
-				<div class="col-md-4">
-					<form action="" method="get" id="searchForm" onsubmit="return false;" class="navbar-form">
-						<input type="text" name="searchInput" id="searchInput" class="form-control" />
-						<button type="submit" id="searchSubmit" class="btn btn-info">Search</button>
-					</form>
-				</div>
-				<nav class="col-md-4">
-					<ul class="nav nav-pills nav-justified">
-						<li role="presentation"><a href="about.html">About us</a></li>
-						<li role="presentation"><a href="contact.html">Contact</a></li>
-					</ul>
-					<ul id="loggedout" class="nav nav-pills nav-justified">
-						<li id="loginLi" role="presentation" class="dropdown">
-    						<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-      							Login<span class="caret"></span>
-    						</a>
-    						<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-    							<li>
-									<form action="" method="get" id="loginForm" onsubmit="return false;" class="form">
-										<div class="form-group">
-											<label for="loginUsrename">Username:</label>
-											<input type="text" name="loginUsrename" id="loginUsrename" class="form-control" />
-										</div>
-										<div class="form-group">
-											<label for="loginPassword">Password:</label>
-											<input type="password" name="loginPassword" id="loginPassword" class="form-control" />
-										</div>
-										<div class="form-group">
-											<input type="checkbox" name="remember" id="remember" />
-											<label for="remember">Remember me</label>
-										</div>
-										<div class="form-group">
-											<button type="submit" id="loginBtn" class="btn btn-info">Login</button>
-										</div>
-									</form>
+				<div class="col-md-8">
+					<nav id="about" class="row">
+						<div class="col-md-6 col-md-offset-6">
+							<ul class="nav nav-pills nav-justified">
+								<li role="presentation"><a href="about.html">About us</a></li>
+								<li role="presentation"><a href="contact.html">Contact</a></li>
+							</ul>
+						</div>
+					</nav>
+					<div class="row">
+						<div id="search" class="col-md-6">
+							<form action="" method="get" id="searchForm" onsubmit="return false;" class="nform-group">
+								<div class="input-group">
+									<input type="text" name="searchInput" id="searchInput" placeholder="Search" class="form-control" >
+									<div class="input-group-btn">
+										<button type="button" id="searchSubmit" class="btn btn-default" ><span class="glyphicon glyphicon-search"></button>
+									</div><!-- /btn-group -->
+								</div><!-- /input-group -->
+							</form>
+						</div>
+						<nav class="col-md-6">
+							<ul id="loggedout" class="nav nav-pills nav-justified">
+								<li id="loginLi" role="presentation" class="dropdown">
+									<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+										Login<span class="caret"></span>
+									</a>
+									<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+										<li>
+											<form action="" method="get" id="loginForm" onsubmit="return false;" class="form">
+												<div class="form-group">
+													<label for="loginUsrename">Username:</label>
+													<input type="text" name="loginUsrename" id="loginUsrename" class="form-control" />
+												</div>
+												<div class="form-group">
+													<label for="loginPassword">Password:</label>
+													<input type="password" name="loginPassword" id="loginPassword" class="form-control" />
+												</div>
+												<div class="form-group">
+													<input type="checkbox" name="remember" id="remember" />
+													<label for="remember">Remember me</label>
+												</div>
+												<div class="form-group">
+													<button type="submit" id="loginBtn" class="btn btn-info">Login</button>
+												</div>
+											</form>
+										</li>
+									</ul>
+								</li>
+								<li id="registerLi" role="presentation">
+									<a href="register.html">Register</a>
+								</li>
+								<li id="cartLi" role="presentation">
+									<a href="cart.html">Cart</a>
 								</li>
 							</ul>
-						</li>
-						<li id="registerLi" role="presentation">
-							<a href="register.html">Register</a>
-						</li>
-						<li id="cartLi" role="presentation">
-							<a href="cart.html">Cart</a>
-						</li>
-					</ul>
-					<ul id="loggedin" class="row">
-						<li id="logoutLi" class="col-md-4">
-							<button type="submit" id="logoutBtn">Logout</button>
-						</li>
-						<li id="profileLi" class="col-md-4">
-							<a href="profile.html">Profile</a>
-						</li>
-						<li id="cartLi" class="col-md-4">
-							<a href="cart.html">Cart</a>
-						</li>
-					</ul>
-				</nav>
+							<ul id="loggedin" class="row">
+								<li id="logoutLi" class="col-md-4">
+									<button type="submit" id="logoutBtn">Logout</button>
+								</li>
+								<li id="profileLi" class="col-md-4">
+									<a href="profile.html">Profile</a>
+								</li>
+								<li id="cartLi" class="col-md-4">
+									<a href="cart.html">Cart</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
 			</header>
 			<nav class="row">
 				<ul class="nav nav-pills nav-justified">
 					<li role="presentation" class="dropdown">
 						<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-							Category 1
+							Category 1<span class="caret">
 						</a>
 						<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
 							<li>Sub-category 1
@@ -91,35 +104,43 @@
 							<li>Sub-category 3</li>
 						</ul>
 					</li>
-					<li role="presentation"><a href="#">Category 2</a></li>
-					<li role="presentation"><a href="#">Category 3</a></li>
-					<li role="presentation"><a href="#">Category 4</a></li>
-					<li role="presentation"><a href="#">Category 5</a></li>
-					<li role="presentation"><a href="#">Category 6</a></li>
+					<li role="presentation"><a href="#">Category 2<span class="caret"></a></li>
+					<li role="presentation"><a href="#">Category 3<span class="caret"></a></li>
+					<li role="presentation"><a href="#">Category 4<span class="caret"></a></li>
+					<li role="presentation"><a href="#">Category 5<span class="caret"></a></li>
+					<li role="presentation"><a href="#">Category 6<span class="caret"></a></li>
 				</ul>
 			</nav>
 			<div id="main" class="row">
 				<div class="col-md-4">
-					<img src="" alt="Product item" />
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<img src="images/Predator_G9_591.jpg" alt="Product item" class="img-responsive" />
+						</div>
+					</div>
 				</div>
 				<div class="col-md-8">
-					<h1>Product item</h1>
-					<p>Specifications</p>
-					<p>Price</p>
-					<button type="button" id="order">Order</button>
-					<button type="button" id="mark">Mark</button>
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<h1>Product item</h1>
+							<p>Specifications</p>
+							<p>Price</p>
+							<button type="button" id="order" class="btn btn-success btn-lg">Order</button>
+							<button type="button" id="mark" class="btn btn-warning btn-lg">Mark</button>
+						</div>
+					</div>
 				</div>
 			</div>
 			<footer>
 				<nav>
-					<ul class="row">
-						<li class="col-md-3"><a href="about.html">About us</a></li>
-						<li class="col-md-3"><a href="contact.html">Contact</a></li>
-						<li class="col-md-3"><a href="terms.html">Terms and Conditions</a></li>
-						<li class="col-md-3"><a href="sitemap.html">Site map</a></li>
+					<ul>
+						<li><a href="about.html">About us</a></li>
+						<li><a href="contact.html">Contact</a></li>
+						<li><a href="terms.html">Terms and Conditions</a></li>
+						<li><a href="sitemap.html">Site map</a></li>
 					</ul>
 				</nav>
-				<p>IT Talents Training Camp Walnut Team 2015 All rights reserved</p>
+				<p class="text-center">IT Talents Training Camp Walnut Team 2015 All rights reserved</p>
 			</footer>
 		</div>
 	</body>
