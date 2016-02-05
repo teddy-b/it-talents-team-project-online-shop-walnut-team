@@ -1,25 +1,5 @@
 @CHARSET "UTF-8";
 
-body,
-header,
-nav,
-section,
-footer,
-div,
-p,
-h1,
-h2,
-form,
-label,
-input,
-button,
-ul,
-li,
-a {
-	margin: 0;
-	padding: 0;
-}
-
 body {
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#28343b+0,828c95+64,b5bdc8+100 */
 	background: rgb(40,52,59); /* Old browsers */
@@ -40,16 +20,9 @@ body {
 	/* Chrome10-25,Safari5.1-6 */
 	/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a0d8ef', endColorstr='#feffff',GradientType=0 ); /* IE6-9 */
-	border-radius: 5px;
 }
 
 #logo {
-	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,2989d8+50,207cca+51,7db9e8+100;Blue+Gloss+Default */
-	background: rgb(30,87,153); /* Old browsers */
-	background: -moz-linear-gradient(top,  rgba(30,87,153,1) 0%, rgba(41,137,216,1) 50%, rgba(32,124,202,1) 51%, rgba(125,185,232,1) 100%); /* FF3.6-15 */
-	background: -webkit-linear-gradient(top,  rgba(30,87,153,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(to bottom,  rgba(30,87,153,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
 	color: #fff;
 }
 
@@ -92,102 +65,36 @@ body {
 	color: rgba(169,214,169,1) !important;
 }
 
+h2 {
+	padding: 5px;
+	border-radius: 4px;
+}
+
 h3 {
 	font-size: 20px !important;
 }
 
 header,
 footer {
-	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,2989d8+50,207cca+51,7db9e8+100;Blue+Gloss+Default */
-	background: rgb(30,87,153); /* Old browsers */
-	background: -moz-linear-gradient(top,  rgba(30,87,153,1) 0%, rgba(41,137,216,1) 50%, rgba(32,124,202,1) 51%, rgba(125,185,232,1) 100%); /* FF3.6-15 */
-	background: -webkit-linear-gradient(top,  rgba(30,87,153,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(to bottom,  rgba(30,87,153,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
-
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e69de+0,6db3f2+100 */
+	background: #1e69de; /* Old browsers */
+	background: -moz-linear-gradient(top,  #1e69de 0%, #6db3f2 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  #1e69de 0%,#6db3f2 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  #1e69de 0%,#6db3f2 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e69de', endColorstr='#6db3f2',GradientType=0 ); /* IE6-9 */
 }
 
-#loginLi ul {
-	width: 400px;
-	padding: 10px;
-}
-
-#loginLi li {
-	border: 0;
+.navbar {
+	border-radius: 0 !important;
 }
 
 #loggedin {
 	display: none;
 }
 
-li {
-	list-style-type: none;
-}
-
-
-#container > nav > ul > li > a,
-#container nav #loggedout a,
-.dropdown-menu > li > ul,
-.dropdown-menu,
-#about li a {
-	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,2989d8+50,207cca+51,7db9e8+100;Blue+Gloss+Default */
-	background: rgb(30,87,153); /* Old browsers */
-	background: -moz-linear-gradient(top,  rgba(30,87,153,1) 0%, rgba(41,137,216,1) 50%, rgba(32,124,202,1) 51%, rgba(125,185,232,1) 100%); /* FF3.6-15 */
-	background: -webkit-linear-gradient(top,  rgba(30,87,153,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(to bottom,  rgba(30,87,153,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
-	color: #eee;
-	border: 1px solid #1E5799;
-	border-radius: 5px;
-}
-
-#container > nav > ul > li > a:hover,
-#about li a:hover,
-#container nav #loggedout a:hover,
-.dropdown-menu li:hover {
-	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7db9e8+0,207cca+49,2989d8+50,1e5799+100 */
-	background: rgb(125,185,232); /* Old browsers */
-	background: -moz-linear-gradient(top,  rgba(125,185,232,1) 0%, rgba(32,124,202,1) 49%, rgba(41,137,216,1) 50%, rgba(30,87,153,1) 100%); /* FF3.6-15 */
-	background: -webkit-linear-gradient(top,  rgba(125,185,232,1) 0%,rgba(32,124,202,1) 49%,rgba(41,137,216,1) 50%,rgba(30,87,153,1) 100%); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(to bottom,  rgba(125,185,232,1) 0%,rgba(32,124,202,1) 49%,rgba(41,137,216,1) 50%,rgba(30,87,153,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7db9e8', endColorstr='#1e5799',GradientType=0 ); /* IE6-9 */
-	color: #fff;
-}
-
-.dropdown-menu > li {
-	position: relative;
-	height: 30px;
-	border-bottom: 1px solid #1E5799;
-}
-
-.dropdown-menu > li > ul {
-	visibility: hidden;
-	position: absolute;
-	left: 160px;
-	top: -5px;
-}
-
-.dropdown-menu > li > ul > li {
-	border-bottom: 1px solid #1E5799;
-}
-
-.dropdown-menu > li > ul a {
-	color: #eee;
-}
-
-#container .dropdown-menu > li:hover ul {
-	visibility: visible;
-}
-
-#container .dropdown-menu > li ul a {
-	display: inline-block;
-	width: 150px;
-	height: 30px;
-}
-
 #register {
-	width: 30%;
-	margin: 50px auto;
+	width: 40%;
+	margin: 20px auto;
 }
 
 #main {
@@ -200,11 +107,10 @@ li {
 
 footer {
 	padding: 10px;
-	margin-bottom: 10px;
-	border-radius: 5px;
 }
 
 footer li {
+	list-style-type: none;
 	text-align: center;
 }
 
@@ -214,4 +120,19 @@ footer a {
 
 footer a:hover {
 	color: #fff;
+}
+
+#register {
+	padding: 10px 30px;
+}
+
+#cart .panel-body {
+	margin: 10px;
+	background-color: white;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+}
+
+#cart div {
+	text-align: center;
 }

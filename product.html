@@ -9,129 +9,155 @@
 	</head>
 	<body>
 		<div id="container" class="container">
-			<header class="row">
-				<div id="logo" class="col-md-4">
+			<header class="container-fluid row">
+				<div id="logo" class="container-fluid row">
 					<h1><a href="index.html">Walnut</a></h1>
 					<h3><a href="index.html">Online Shop</a></h3>
 				</div>
-				<div class="col-md-8">
-					<nav id="about" class="row">
-						<div class="col-md-6 col-md-offset-6">
-							<ul class="nav nav-pills nav-justified">
-								<li role="presentation"><a href="about.html">About us</a></li>
-								<li role="presentation"><a href="contact.html">Contact</a></li>
-							</ul>
-						</div>
-					</nav>
-					<div class="row">
-						<div id="search" class="col-md-6">
-							<form action="" method="get" id="searchForm" onsubmit="return false;" class="nform-group">
-								<div class="input-group">
-									<input type="text" name="searchInput" id="searchInput" placeholder="Search" class="form-control" >
-									<div class="input-group-btn">
-										<button type="button" id="searchSubmit" class="btn btn-default" ><span class="glyphicon glyphicon-search"></button>
-									</div><!-- /btn-group -->
-								</div><!-- /input-group -->
-							</form>
-						</div>
-						<nav class="col-md-6">
-							<ul id="loggedout" class="nav nav-pills nav-justified">
-								<li id="loginLi" role="presentation" class="dropdown">
-									<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-										Login<span class="caret"></span>
-									</a>
-									<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-										<li>
-											<form action="" method="get" id="loginForm" onsubmit="return false;" class="form">
-												<div class="form-group">
-													<label for="loginUsrename">Username:</label>
-													<input type="text" name="loginUsrename" id="loginUsrename" class="form-control" />
-												</div>
-												<div class="form-group">
-													<label for="loginPassword">Password:</label>
-													<input type="password" name="loginPassword" id="loginPassword" class="form-control" />
-												</div>
-												<div class="form-group">
-													<input type="checkbox" name="remember" id="remember" />
-													<label for="remember">Remember me</label>
-												</div>
-												<div class="form-group">
-													<button type="submit" id="loginBtn" class="btn btn-info">Login</button>
-												</div>
-											</form>
-										</li>
-									</ul>
-								</li>
-								<li id="registerLi" role="presentation">
-									<a href="register.html">Register</a>
-								</li>
-								<li id="cartLi" role="presentation">
-									<a href="cart.html">Cart</a>
-								</li>
-							</ul>
-							<ul id="loggedin" class="row">
-								<li id="logoutLi" class="col-md-4">
-									<button type="submit" id="logoutBtn">Logout</button>
-								</li>
-								<li id="profileLi" class="col-md-4">
-									<a href="profile.html">Profile</a>
-								</li>
-								<li id="cartLi" class="col-md-4">
-									<a href="cart.html">Cart</a>
-								</li>
-							</ul>
-						</nav>
-					</div>
-				</div>
 			</header>
-			<nav class="row">
-				<ul class="nav nav-pills nav-justified">
-					<li role="presentation" class="dropdown">
-						<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-							Category 1<span class="caret">
-						</a>
-						<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-							<li>Sub-category 1
-								<ul>
+			<nav class="navbar navbar-inverse row">
+				<div class="container-fluid">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="index.html"><span class="glyphicon glyphicon-home"></span></a>
+					</div>
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav">
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Category 1<span class="caret"></span></a>
+								<ul class="dropdown-menu">
 									<li><a href="catalog.html">Product-type 1</a></li>
 									<li><a href="catalog.html">Product-type 2</a></li>
 									<li><a href="catalog.html">Product-type 3</a></li>
-									<li><a href="catalog.html">Product-type 4</a></li>
-									<li><a href="catalog.html">Product-type 5</a></li>
 								</ul>
 							</li>
-							<li>Sub-category 2</li>
-							<li>Sub-category 3</li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Category 2<span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a href="catalog.html">Product-type 1</a></li>
+									<li><a href="catalog.html">Product-type 2</a></li>
+									<li><a href="catalog.html">Product-type 3</a></li>
+								</ul>
+							</li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Category 3<span class="caret"></span></a>
+ 								<ul class="dropdown-menu">
+									<li><a href="catalog.html">Product-type 1</a></li>
+									<li><a href="catalog.html">Product-type 2</a></li>
+									<li><a href="catalog.html">Product-type 3</a></li>
+								</ul>
+							</li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Category 4<span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a href="catalog.html">Product-type 1</a></li>
+									<li><a href="catalog.html">Product-type 2</a></li>
+									<li><a href="catalog.html">Product-type 3</a></li>
+								</ul>
+							</li>
 						</ul>
-					</li>
-					<li role="presentation"><a href="#">Category 2<span class="caret"></a></li>
-					<li role="presentation"><a href="#">Category 3<span class="caret"></a></li>
-					<li role="presentation"><a href="#">Category 4<span class="caret"></a></li>
-					<li role="presentation"><a href="#">Category 5<span class="caret"></a></li>
-					<li role="presentation"><a href="#">Category 6<span class="caret"></a></li>
-				</ul>
+						<form class="navbar-form navbar-left nform-group" role="search">
+							<div class="input-group">
+								<input type="search" name="searchInput" id="searchInput" placeholder="Search" class="form-control" >
+								<div class="input-group-btn">
+									<button type="button" id="searchSubmit" class="btn btn-default" >
+										<span class="glyphicon glyphicon-search">
+									</button>
+								</div><!-- /btn-group -->
+							</div>
+						</form>
+						<ul class="nav navbar-nav navbar-right" id="loggedout">
+							<li id="loginLi">
+								<a href="" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-log-in"></span> Login</a>
+							</li>
+							<li id="registerLi">
+								<a href="register.html"><span class="glyphicon glyphicon-import"></span> Register</a>
+							</li>
+							<li id="cartLi">
+								<a href="cart.html"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a>
+							</li>
+						</ul>
+						<ul class="nav navbar-nav navbar-right" id="loggedin">
+							<li id="loginLi">
+								<a href="#"><span class="glyphicon glyphicon-log-out"></span> Logout</a>
+							</li>
+							<li id="registerLi">
+								<a href="profile.html"><span class="glyphicon glyphicon-user"></span> Profile</a>
+							</li>
+							<li id="cartLi">
+								<a href="cart.html"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a>
+							</li>
+						</ul>
+					</div><!-- /.navbar-collapse -->
+				</div><!-- /.container-fluid -->
 			</nav>
-			<div id="main" class="row">
-				<div class="col-md-4">
-					<div class="panel panel-default">
-						<div class="panel-body">
-							<img src="images/Predator_G9_591.jpg" alt="Product item" class="img-responsive" />
+			<!-- Modal -->
+			<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+							<h4 class="modal-title" id="myModalLabel">Login</h4>
 						</div>
-					</div>
-				</div>
-				<div class="col-md-8">
-					<div class="panel panel-default">
-						<div class="panel-body">
-							<h1>Product item</h1>
-							<p>Specifications</p>
-							<p>Price</p>
-							<button type="button" id="order" class="btn btn-success btn-lg">Order</button>
-							<button type="button" id="mark" class="btn btn-warning btn-lg">Mark</button>
-						</div>
+						<form action="" method="get" id="loginForm" class="form">
+							<div class="modal-body">
+								<div class="form-group">
+									<label for="loginUsrename">Username:</label>
+									<input type="text" name="loginUsrename" id="loginUsrename" class="form-control" />
+								</div>
+								<div class="form-group">
+									<label for="loginPassword">Password:</label>
+									<input type="password" name="loginPassword" id="loginPassword" class="form-control" />
+								</div>
+								<div class="form-group">
+									<input type="checkbox" name="remember" id="remember" />
+									<label for="remember">Remember me</label>
+								</div>		
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+								<button type="button" class="btn btn-primary">Login</button>
+							</div>
+						</form>
 					</div>
 				</div>
 			</div>
-			<footer>
+			<div id="main" class="row">
+				<section id="product">
+					<div class="col-md-4">
+						<div class="panel panel-default">
+							<div class="panel-body">
+								<img src="images/Predator_G9_591.jpg" alt="Product item" class="img-responsive" />
+							</div>
+						</div>
+					</div>
+					<div class="col-md-8">
+						<div class="panel panel-default">
+							<div class="panel-body">
+								<h1>Product item</h1>
+								<p>Specifications</p>
+								<p>Price</p>
+								<button type="button" title="Add to cart" id="order" class="btn btn-success btn-lg">
+									<span class="glyphicon glyphicon-shopping-cart"></span>
+								</button>
+								<button type="button" title="Add to favourites" id="mark" class="btn btn-danger btn-lg">
+									<span class="glyphicon glyphicon-heart"></span>
+								</button>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+			<footer class="container-fluid row">
 				<nav>
 					<ul>
 						<li><a href="about.html">About us</a></li>
