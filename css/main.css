@@ -22,16 +22,16 @@ body {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a0d8ef', endColorstr='#feffff',GradientType=0 ); /* IE6-9 */
 }
 
+header a{
+	color: #fff;
+}
+
+header a:hover{
+	text-decoration: none;
+}
+
 #logo {
 	color: #fff;
-}
-
-#logo a{
-	color: #fff;
-}
-
-#logo a:hover{
-	text-decoration: none;
 }
 
 #logo {
@@ -126,13 +126,38 @@ footer a:hover {
 	padding: 10px 30px;
 }
 
-#cart .panel-body {
-	margin: 10px;
-	background-color: white;
-	border: 1px solid #ddd;
-	border-radius: 5px;
+
+#cart div,
+#cart td {
+	text-align: center;
+	vertical-align: middle;
 }
 
-#cart div {
-	text-align: center;
+#cart img,
+#profile img {
+	width: 64px;
+	height: 64px;
+}
+
+#product .panel img {
+	cursor: zoom-in;
+}
+
+iframe {
+	margin: 20px auto;
+}
+
+#about img {
+	width: 30%;
+	margin: 20px;
+	border-radius: 10px;
+}
+
+#sitemap {
+	padding: 0 20px 20px 20px;
+}
+
+#sitemap ul {
+	list-style-type: none;
+	padding: 0;
 }

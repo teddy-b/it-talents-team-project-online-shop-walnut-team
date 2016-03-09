@@ -1,19 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
-		<meta charset="UTF-8">
-		<title>Home</title>
+		<meta charset="utf-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+		<title>Catalog - Walnut Online Store</title>
 		<link rel="stylesheet" href="css/main.css" />
-		<link rel="stylesheet" href="css/bootstrap.css" />
+		<!-- Bootstrap -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/bootstrap-theme.min.css" rel="stylesheet">
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
 		<link href='https://fonts.googleapis.com/css?family=Seymour+One&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 	</head>
 	<body>
 		<div id="container" class="container">
 			<header class="container-fluid row">
-				<div id="logo" class="container-fluid row">
-					<h1><a href="index.html">Walnut</a></h1>
-					<h3><a href="index.html">Online Shop</a></h3>
-				</div>
+				<a href="index.html">
+					<div id="logo" class="container-fluid row">
+						<h1>Walnut</h1>
+						<h3>Online Store</h3>
+					</div>
+				</a>
 			</header>
 			<nav class="navbar navbar-inverse row">
 				<div class="container-fluid">
@@ -132,7 +145,7 @@
 				</div>
 			</div>
 			<div id="main" class="row">
-				<section id="filter" class="col-md-2">
+				<section id="filter" class="col-md-3 col-sm-4">
 					<form action="">
 						<div>
 							<label for="orderby">Order by:</label>
@@ -190,17 +203,19 @@
 						</div>
 					</form>
 				</section>
-				<section id="catalog" class="col-md-10">
+				<section id="catalog" class="col-md-9 col-sm-8">
 					<div class="row">
-						<div class="col-md-3">
+						<div class="col-md-4 col-sm-6">
 							<div class="thumbnail">
 								<a href="product.html"><img src="images/Predator_G9_591.jpg" alt="product 1" /></a>
 								<div class="caption">
 									<h3><a href="product.html">Product 1</a></h3>
-									<p>Description</p>
-									<p>Price</p>
+									<p>Intel Core i7 6700HQ, 16 GB, NVidia GE Force 980M, 15.6 inch full HD anti-galre, 1 TB SATA</p>
+									<p class="h3"><s class="text-muted">2299 lv</s><span class="text-danger"> 1899 lv</span></p>
 									<p>
-										<a href="product.html" title="View description" class="btn btn-info" role="button">View</a>
+										<a href="product.html" title="View description" class="btn btn-info" role="button">View 
+											<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+										</a>
 										<a href="#" title="Add to favourites" class="btn btn-danger" role="button">
 											<span class="glyphicon glyphicon-heart"></span>
 										</a>
@@ -208,15 +223,17 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-md-3">
+						<div class="col-md-4 col-sm-6">
 							<div class="thumbnail">
 								<a href="product.html"><img src="images/Predator_G9_591.jpg" alt="product 1" /></a>
 								<div class="caption">
 									<h3><a href="product.html">Product 2</a></h3>
-									<p>Description</p>
-									<p>Price</p>
+									<p>Intel Core i7 6700HQ, 16 GB, NVidia GE Force 980M, 15.6 inch full HD anti-galre, 1 TB SATA</p>
+									<p class="h3 text-info">1999 lv</p>
 									<p>
-										<a href="product.html" title="View description" class="btn btn-info" role="button">View</a>
+										<a href="product.html" title="View description" class="btn btn-info" role="button">View 
+											<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+										</a>
 										<a href="#" title="Add to favourites" class="btn btn-danger" role="button">
 											<span class="glyphicon glyphicon-heart"></span>
 										</a>
@@ -224,15 +241,17 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-md-3">
+						<div class="col-md-4 col-sm-6">
 							<div class="thumbnail">
 								<a href="product.html"><img src="images/Predator_G9_591.jpg" alt="product 1" /></a>
 								<div class="caption">
 									<h3><a href="product.html">Product 3</a></h3>
-									<p>Description</p>
-									<p>Price</p>
+									<p>Intel Core i7 6700HQ, 16 GB, NVidia GE Force 980M, 15.6 inch full HD anti-galre, 1 TB SATA</p>
+									<p class="h3 text-info">1999 lv</p>
 									<p>
-										<a href="product.html" title="View description" class="btn btn-info" role="button">View</a>
+										<a href="product.html" title="View description" class="btn btn-info" role="button">View 
+											<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+										</a>
 										<a href="#" title="Add to favourites" class="btn btn-danger" role="button">
 											<span class="glyphicon glyphicon-heart"></span>
 										</a>
@@ -240,15 +259,17 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-md-3">
+						<div class="col-md-4 col-sm-6">
 							<div class="thumbnail">
 								<a href="product.html"><img src="images/Predator_G9_591.jpg" alt="product 1" /></a>
 								<div class="caption">
 									<h3><a href="product.html">Product 4</a></h3>
-									<p>Description</p>
-									<p>Price</p>
+									<p>Intel Core i7 6700HQ, 16 GB, NVidia GE Force 980M, 15.6 inch full HD anti-galre, 1 TB SATA</p>
+									<p class="h3 text-info">1999 lv</p>
 									<p>
-										<a href="product.html" title="View description" class="btn btn-info" role="button">View</a>
+										<a href="product.html" title="View description" class="btn btn-info" role="button">View 
+											<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+										</a>
 										<a href="#" title="Add to favourites" class="btn btn-danger" role="button">
 											<span class="glyphicon glyphicon-heart"></span>
 										</a>
@@ -256,15 +277,17 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-md-3">
+						<div class="col-md-4 col-sm-6">
 							<div class="thumbnail">
 								<a href="product.html"><img src="images/Predator_G9_591.jpg" alt="product 1" /></a>
 								<div class="caption">
 									<h3><a href="product.html">Product 5</a></h3>
-									<p>Description</p>
-									<p>Price</p>
+									<p>Intel Core i7 6700HQ, 16 GB, NVidia GE Force 980M, 15.6 inch full HD anti-galre, 1 TB SATA</p>
+									<p class="h3 text-info">1999 lv</p>
 									<p>
-										<a href="product.html" title="View description" class="btn btn-info" role="button">View</a>
+										<a href="product.html" title="View description" class="btn btn-info" role="button">View 
+											<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+										</a>
 										<a href="#" title="Add to favourites" class="btn btn-danger" role="button">
 											<span class="glyphicon glyphicon-heart"></span>
 										</a>
@@ -272,47 +295,17 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-md-3">
+						<div class="col-md-4 col-sm-6">
 							<div class="thumbnail">
 								<a href="product.html"><img src="images/Predator_G9_591.jpg" alt="product 1" /></a>
 								<div class="caption">
 									<h3><a href="product.html">Product 6</a></h3>
-									<p>Description</p>
-									<p>Price</p>
+									<p>Intel Core i7 6700HQ, 16 GB, NVidia GE Force 980M, 15.6 inch full HD anti-galre, 1 TB SATA</p>
+									<p class="h3 text-info">1999 lv</p>
 									<p>
-										<a href="product.html" title="View description" class="btn btn-info" role="button">View</a>
-										<a href="#" title="Add to favourites" class="btn btn-danger" role="button">
-											<span class="glyphicon glyphicon-heart"></span>
+										<a href="product.html" title="View description" class="btn btn-info" role="button">View 
+											<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
 										</a>
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-3">
-							<div class="thumbnail">
-								<a href="product.html"><img src="images/Predator_G9_591.jpg" alt="product 1" /></a>
-								<div class="caption">
-									<h3><a href="product.html">Product 7</a></h3>
-									<p>Description</p>
-									<p>Price</p>
-									<p>
-										<a href="product.html" title="View description" class="btn btn-info" role="button">View</a>
-										<a href="#" title="Add to favourites" class="btn btn-danger" role="button">
-											<span class="glyphicon glyphicon-heart"></span>
-										</a>
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-3">
-							<div class="thumbnail">
-								<a href="product.html"><img src="images/Predator_G9_591.jpg" alt="product 1" /></a>
-								<div class="caption">
-									<h3><a href="product.html">Product 8</a></h3>
-									<p>Description</p>
-									<p>Price</p>
-									<p>
-										<a href="product.html" title="View description" class="btn btn-info" role="button">View</a>
 										<a href="#" title="Add to favourites" class="btn btn-danger" role="button">
 											<span class="glyphicon glyphicon-heart"></span>
 										</a>
@@ -336,7 +329,7 @@
 			</footer>
 		</div>
 	</body>
+	<script type="text/javascript" src="js/jquery-2.1.4.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
-	<script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript" src="js/bootstrap.js"></script>
 </html>
