@@ -126,6 +126,10 @@ footer a:hover {
 	padding: 10px 30px;
 }
 
+#register #success {
+	display: none;
+}
+
 
 #cart div,
 #cart td {
