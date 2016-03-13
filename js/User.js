@@ -7,22 +7,13 @@ var User = (function() {
 		$loginPassword = $('#loginForm #loginPassword');
 
 	function User(cart) {
-		var _username = '',
-			_firstName = '',
+		var _firstName = '',
 			_lastName = '',
 			_email = '',
-			_password = '',
 			_cart = [],
-			_favourites = [],
-			_isLogged = false;
+			_favourites = [];
 
-		this.getUsername = function() {
-			return _username;
-		};
-
-		this.setUsername = function(username) {
-			_username = username;
-		};
+		Person.call(this);
 
 		this.getFirstName = function() {
 			return _firstName;
@@ -48,14 +39,6 @@ var User = (function() {
 			_email = email;
 		};
 
-		this.getPassword = function() {
-			return _password;
-		};
-
-		this.setPassword = function(password) {
-			_password = password;
-		};
-
 		this.getCart = function() {
 			return _cart;
 		};
@@ -71,27 +54,19 @@ var User = (function() {
 		this.setFavourites = function(favourites) {
 			_favourites = favourites;
 		};
-
-		this.getIsLogged = function() {
-			return _isLogged;
-		};
-
-		this.setIsLogged = function(isLogged) {
-			_isLogged = isLogged;
-		};
 	}
 
 	function validateRegistration() {
 		var msg = '';
 
 		msg = validateField('Username', $registerUsername);
-		ShowMsg($registerUsername, msg);
+		Person.showMsg.call(this, $registerUsername, msg);
 		
 		msg = validateField('Email', $registerEmail);
-		ShowMsg($registerEmail, msg);
+		Person.showMsg.call(this, $registerEmail, msg);
 		
 		msg = validateField('Password', $registerPassword);
-		ShowMsg($registerPassword, msg);
+		Person.showMsg.call(this, $registerPassword, msg);
 		
 		if ($repeatPassword.val().length < 1){
 			msg = 'Repeat password is required!';
@@ -101,23 +76,9 @@ var User = (function() {
 			msg = '';
 		}
 
-		ShowMsg($repeatPassword, msg);
+		Person.showMsg.call(this, $repeatPassword, msg);
 		
 		if (!($('#registerForm .has-error').length)) {
-			return true;
-		}
-	}
-
-	function validateLogin() {
-		var msg = '';
-
-		msg = validateRequired('Username', $loginUsername);
-		ShowMsg($loginUsername, msg);
-		
-		msg = validateRequired('Password', $loginPassword);
-		ShowMsg($loginPassword, msg);
-		
-		if (!($('#loginForm .has-error').length)) {
 			return true;
 		}
 	}
@@ -138,59 +99,16 @@ var User = (function() {
 		return msg;
 	}
 
-	function validateRequired(field, $dom) {
-		var msg = '';
+	User.prototype = Object.create(Person.prototype);
+	User.constructor = User();
 
-		if ($dom.val().length < 1){
-			msg = field + ' is required!';
-		} else if ($dom.val().length > 20){
-			msg = field + ' is too long!';
-		}else {
-			msg = '';
-		}
+	User.prototype.login = function() {
+		Person.prototype.login.call(this);
+	};
 
-		return msg;
-	}
-
-	function ShowMsg(field, msg) {
-		if (msg && field.siblings('.help-block').length) {
-			field.siblings('.help-block').html(msg);
-		} else 
-		if (msg) {
-			field.parent()
-				.addClass('has-error')
-				.addClass('has-feedback');
-
-			$('<span />')
-				.addClass('glyphicon')
-				.addClass('glyphicon-remove')
-				.addClass('form-control-feedback')
-				.appendTo(field.parent());
-
-			$('<span />').addClass('help-block')
-				.html(msg)
-				.appendTo(field.parent());
-		} else {
-			field.parent()
-				.removeClass('has-error')
-				.addClass('has-success')
-				.addClass('has-feedback');
-
-			field.siblings('.help-block').remove();
-
-			if (field.siblings('.glyphicon-remove').length) {
-				field.siblings('.glyphicon-remove')
-					.removeClass('glyphicon-remove')
-					.addClass('glyphicon-ok');
-			} else {
-				$('<span />')
-					.addClass('glyphicon')
-					.addClass('glyphicon-ok')
-					.addClass('form-control-feedback')
-					.appendTo(field.parent());
-			}
-		}
-	}
+	User.prototype.logout = function() {
+		Person.prototype.logout.call(this);
+	};
 
 	User.prototype.register = function() {
 		if (this.getIsLogged()) {
@@ -224,43 +142,27 @@ var User = (function() {
 		// });
 	};
 
-	User.prototype.login = function() {
-		if (this.getIsLogged()) {
-			alert('You are already logged in!');
-			return;
-		}
-
-		if (!validateLogin()) {
-			return;
-		}
-
-		this.setUsername($registerUsername.val());
-		this.setPassword($registerPassword.val());
-
-		data = {
-			username: this.getUsername(),
-			password: this.getPassword()
-		};
-
-		// $.ajax({
-		// 	method: "POST",
-		// 	url: "server.php",
-		//	contentType: "application/JSON",
-		// 	data: data,
-		// 	success: function() {
-				$('#login-modal').modal('hide');
-				$('#bs-example-navbar-collapse-1 #loggedout').hide();
-				$('#bs-example-navbar-collapse-1 #loggedin').show();
-				this.setIsLogged(true);
-			// }
-		// });
-	};
-
-	User.prototype.logout = function() {
-		$('#bs-example-navbar-collapse-1 #loggedin').hide();
-		$('#bs-example-navbar-collapse-1 #loggedout').show();
-		this.setIsLogged(false);
-	};
-
 	return User;
+}());
+
+(function() {
+	var user = new User();
+
+	$('#registerBtn').on('click', function() {
+		user.register();
+	}).on('submit', function() {
+		return false;
+	});
+
+	$('#loginBtn').on('click', function() {
+		user.login();
+	}).on('submit', function() {
+		return false;
+	});
+
+	$('#logoutBtn').on('click', function() {
+		user.logout();
+	}).on('submit', function() {
+		return false;
+	});
 }());

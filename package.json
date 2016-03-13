@@ -1,0 +1,24 @@
+{
+  "name": "it-talents-team-project-online-shop-walnut-team",
+  "version": "1.0.0",
+  "description": "IT Talents - Team project - Online shop - Walnut team",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/teddy-b/it-talents-team-project-online-shop-walnut-team.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/teddy-b/it-talents-team-project-online-shop-walnut-team/issues"
+  },
+  "homepage": "https://github.com/teddy-b/it-talents-team-project-online-shop-walnut-team#readme",
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "font-awesome": "^4.5.0",
+    "jquery": "^2.2.1"
+  }
+}
