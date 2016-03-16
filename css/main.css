@@ -35,7 +35,7 @@ header a:hover{
 }
 
 #logo {
-	font-family: 'Seymour One', sans-serif !important;
+	font-family: 'Seymour One', sans-serif;
 	color: rgb(255, 255, 255);
 	text-shadow: 0 1px 0 rgb(204,204,204) , 0 2px 0 rgb(201,201,201) , 0 3px 0 rgb(187,187,187) , 0 4px 0 rgb(185,185,185) , 0 5px 0 rgb(170,170,170) , 0 6px 1px rgba(0,0,0,0.0980392) , 0 0 5px rgba(0,0,0,0.0980392) , 0 1px 3px rgba(0,0,0,0.298039) , 0 3px 5px rgba(0,0,0,0.2) , 0 5px 10px rgba(0,0,0,0.247059) , 0 10px 10px rgba(0,0,0,0.2) , 0 20px 20px rgba(0,0,0,0.14902) ;
 	-webkit-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
@@ -49,7 +49,7 @@ header a:hover{
 }
 
 #logo:hover{
-	color: rgba(169,214,169,1) !important;
+	color: rgb(204,204,204);
 	text-shadow: 0 1px 0 rgba(255,255,255,1) , 0 2px 0 rgba(255,255,255,1) , 0 3px 0 rgba(255,255,255,1) , 0 4px 0 rgba(255,255,255,1) , 0 5px 0 rgba(255,255,255,1) , 0 6px 1px rgba(0,0,0,0.0980392) , 0 0 5px rgba(0,0,0,0.0980392) , 0 1px 3px rgba(0,0,0,0.298039) , 0 3px 5px rgba(0,0,0,0.2) , 0 -5px 10px rgba(0,0,0,0.247059) , 0 -7px 10px rgba(0,0,0,0.2) , 0 -15px 20px rgba(0,0,0,0.14902) ;
 	-webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
 	-moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
@@ -61,17 +61,9 @@ header a:hover{
 	transform-origin: 50% 50% 0;
 }
 
-#logo:hover a{
-	color: rgba(169,214,169,1) !important;
-}
-
 h2 {
 	padding: 5px;
 	border-radius: 4px;
-}
-
-h3 {
-	font-size: 20px !important;
 }
 
 header,
@@ -85,7 +77,7 @@ footer {
 }
 
 .navbar {
-	border-radius: 0 !important;
+	border-radius: 0;
 }
 
 #loggedin {

@@ -6,14 +6,30 @@ var User = (function() {
 		$loginUsername = $('#loginForm #loginUsername'),
 		$loginPassword = $('#loginForm #loginPassword');
 
-	function User(cart) {
-		var _firstName = '',
+	function User() {
+		var _username = localStorage.getItem('wlnt-username') || '',
+			_password = '',
+			_firstName = '',
 			_lastName = '',
 			_email = '',
 			_cart = [],
 			_favourites = [];
 
-		Person.call(this);
+		this.getUsername = function() {
+			return _username;
+		};
+
+		this.setUsername = function(username) {
+			_username = username;
+		};
+
+		this.getPassword = function() {
+			return _password;
+		};
+
+		this.setPassword = function(password) {
+			_password = password;
+		};
 
 		this.getFirstName = function() {
 			return _firstName;
@@ -60,13 +76,13 @@ var User = (function() {
 		var msg = '';
 
 		msg = validateField('Username', $registerUsername);
-		Person.showMsg.call(this, $registerUsername, msg);
+		showMsg($registerUsername, msg);
 		
 		msg = validateField('Email', $registerEmail);
-		Person.showMsg.call(this, $registerEmail, msg);
+		showMsg($registerEmail, msg);
 		
 		msg = validateField('Password', $registerPassword);
-		Person.showMsg.call(this, $registerPassword, msg);
+		showMsg($registerPassword, msg);
 		
 		if ($repeatPassword.val().length < 1){
 			msg = 'Repeat password is required!';
@@ -76,7 +92,7 @@ var User = (function() {
 			msg = '';
 		}
 
-		Person.showMsg.call(this, $repeatPassword, msg);
+		showMsg($repeatPassword, msg);
 		
 		if (!($('#registerForm .has-error').length)) {
 			return true;
@@ -99,19 +115,76 @@ var User = (function() {
 		return msg;
 	}
 
-	User.prototype = Object.create(Person.prototype);
-	User.constructor = User();
+	function validateLogin() {
+		var msg = '';
 
-	User.prototype.login = function() {
-		Person.prototype.login.call(this);
-	};
+		msg = validateRequired('Username', $loginUsername);
+		showMsg($loginUsername, msg);
+		
+		msg = validateRequired('Password', $loginPassword);
+		showMsg($loginPassword, msg);
+		
+		if (!($('#loginForm .has-error').length)) {
+			return true;
+		}
+	}
 
-	User.prototype.logout = function() {
-		Person.prototype.logout.call(this);
-	};
+	function validateRequired(field, $dom) {
+		var msg = '';
+
+		if ($dom.val().length < 1){
+			msg = field + ' is required!';
+		} else if ($dom.val().length > 20){
+			msg = field + ' is too long!';
+		}else {
+			msg = '';
+		}
+
+		return msg;
+	}
+
+	function showMsg(field, msg) {
+		if (msg && field.siblings('.help-block').length) {
+			field.siblings('.help-block').html(msg);
+		} else 
+		if (msg) {
+			field.parent()
+				.addClass('has-error')
+				.addClass('has-feedback');
+
+			$('<span />')
+				.addClass('glyphicon')
+				.addClass('glyphicon-remove')
+				.addClass('form-control-feedback')
+				.appendTo(field.parent());
+
+			$('<span />').addClass('help-block')
+				.html(msg)
+				.appendTo(field.parent());
+		} else {
+			field.parent()
+				.removeClass('has-error')
+				.addClass('has-success')
+				.addClass('has-feedback');
+
+			field.siblings('.help-block').remove();
+
+			if (field.siblings('.glyphicon-remove').length) {
+				field.siblings('.glyphicon-remove')
+					.removeClass('glyphicon-remove')
+					.addClass('glyphicon-ok');
+			} else {
+				$('<span />')
+					.addClass('glyphicon')
+					.addClass('glyphicon-ok')
+					.addClass('form-control-feedback')
+					.appendTo(field.parent());
+			}
+		}
+	}
 
 	User.prototype.register = function() {
-		if (this.getIsLogged()) {
+		if (localStorage.getItem('wlnt-username')) {
 			alert('You are already logged in!');
 			return;
 		}
@@ -131,15 +204,65 @@ var User = (function() {
 		};
 
 		// $.ajax({
-		// 	method: "POST",
-		// 	url: "server.php",
-		//	contentType: "application/JSON",
-		// 	data: data,
+		// 	url: 'server.php',
+		// 	method: 'POST',
+		//	contentType: 'application/json',
+		// 	data: JSON.stringify(data),
 		// 	success: function() {
 				$('#register #registerForm').hide();
 				$('#register #success').show();
+				$('#registerForm')[0].reset();
 			// }
 		// });
+	};
+
+	User.prototype.login = function() {
+		if (localStorage.getItem('wlnt-username')) {
+			alert('You are already logged in!');
+			return;
+		}
+
+		if (!validateLogin()) {
+			return;
+		}
+
+		this.setUsername($loginUsername.val());
+		this.setPassword($loginPassword.val());
+
+		data = {
+			username: this.getUsername(),
+			password: this.getPassword()
+		};
+
+		// $.ajax({
+		// 	url: 'server.php',
+		// 	method: 'PUT',
+		//	contentType: 'application/json',
+		// 	data: JSON.stringify(data),
+		// 	success: function() {
+				$('#login-modal').modal('hide');
+				$('#bs-example-navbar-collapse-1 #loggedout').hide();
+				$('#bs-example-navbar-collapse-1 #loggedin').show();
+
+				$('#loginForm')[0].reset();
+
+				localStorage.setItem('wlnt-username', this.getUsername());
+			// }
+		// });
+	};
+
+	User.prototype.logout = function() {
+		$('#bs-example-navbar-collapse-1 #loggedin').hide();
+		$('#bs-example-navbar-collapse-1 #loggedout').show();
+
+		this.setUsername('');
+		this.setPassword('');
+
+		localStorage.removeItem('wlnt-username');
+	};
+
+	User.prototype.addFavourite = function(favourite) {
+		this.getFavourites().push(favourite);
 	};
 
 	return User;
@@ -147,6 +270,14 @@ var User = (function() {
 
 (function() {
 	var user = new User();
+
+	if (localStorage.getItem('wlnt-username')) {
+		$('#bs-example-navbar-collapse-1 #loggedout').hide();
+		$('#bs-example-navbar-collapse-1 #loggedin').show();
+	} else {
+		$('#bs-example-navbar-collapse-1 #loggedout').show();
+		$('#bs-example-navbar-collapse-1 #loggedin').hide();
+	}
 
 	$('#registerBtn').on('click', function() {
 		user.register();

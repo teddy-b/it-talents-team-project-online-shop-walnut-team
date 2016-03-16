@@ -78,20 +78,18 @@ var Product = (function() {
 		cart.addProduct(this);
 	};
 
-	Product.prototype.addToFavourites = function(favourites) {
-		favourites.addProduct(this);
+	Product.prototype.addToFavourites = function(user) {
+		user.addFavourite(this);
 	};
 
 	Product.prototype.showPage = function() {
 		// $.ajax({
-		// 	method: "GET",
-		// 	url: "server.php",
-		// 	contentType: "application/JSON",
-		// 	data: this.getId(),
+		// 	url: 'server.php',
+		// 	method: 'GET',
+		// 	contentType: 'application/json',
+		// 	data: JSON.stringify(this.getId()),
 		// 	success: function(product) {
-		// 		console.log(product);
-
-				
+		// 		
 		// 	}
 		// });
 	};
